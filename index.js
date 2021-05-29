@@ -19,6 +19,8 @@ const listarTodasAsPizzas = () => {
 
 console.log(listarTodasAsPizzas());
 
+app.get("/pizzas", (req, res) => res.json(pizzas));
+
 const adicionarPizza = function (sabor, categoria, preco) {
   const pizzaNova = {
     id: pizzas[pizzas.length - 1].id + 1,
